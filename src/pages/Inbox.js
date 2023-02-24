@@ -30,8 +30,8 @@ const Inbox = () => {
     <React.Fragment>
       <Compose />
       <SideBar />
-      <Button className="ms-5 mt-5" onClick={handleShow}>
-        <FaBars />
+      <Button className="ms-5 mt-5 d-flex" onClick={handleShow}>
+        <FaBars className="mt-2 me-2 " /> <h4>Mail options</h4>
       </Button>
       <Container className="w-75 justify-content-center">
         <ListGroup as="ul" className="p-3">
