@@ -50,9 +50,15 @@ const Header = () => {
         </Nav>
       )}
 
-      <Button variant="danger" className="ms-auto me-5" onClick={logoutHandler}>
-        Logout
-      </Button>
+      {token && (
+        <Button
+          variant="danger"
+          className="ms-auto me-5"
+          onClick={logoutHandler}
+        >
+          Logout
+        </Button>
+      )}
     </Navbar>
   );
 };
