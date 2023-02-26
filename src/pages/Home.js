@@ -1,11 +1,19 @@
 import React from "react";
+import { Card, Container } from "react-bootstrap";
+import imageurl from "../images/email.jpg";
 
 const Home = () => {
   return (
     <React.Fragment>
-      <h1 className="text-center" style={{ marginTop: "200px" }}>
-        Welcome to My Mail
-      </h1>
+      <Container
+        className="d-flex justify-content-center"
+        style={{ marginTop: "50px" }}
+      >
+        <img src={imageurl} alt="mail" width="300px" />
+      </Container>
+      <Container className="d-flex justify-content-center">
+        <h1 className="display-3">Welcome to My Mail</h1>
+      </Container>
     </React.Fragment>
   );
 };

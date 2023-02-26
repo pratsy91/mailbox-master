@@ -8,6 +8,10 @@ const Header = () => {
     localStorage.removeItem("token");
     navigate("/auth?mode=login");
   };
+
+  const loginHandler = () => {
+    navigate("/auth?mode=login");
+  };
   return (
     <Navbar className="justify-content-center" variant="dark" bg="dark">
       <Navbar.Brand className="ms-5">My Mail</Navbar.Brand>
@@ -48,6 +52,16 @@ const Header = () => {
             </NavLink>
           )}
         </Nav>
+      )}
+
+      {!token && (
+        <Button
+          variant="primary"
+          className="ms-auto me-5"
+          onClick={loginHandler}
+        >
+          Login
+        </Button>
       )}
 
       {token && (

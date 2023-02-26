@@ -18,7 +18,7 @@ const router = createBrowserRouter([
     id: "token",
     loader: tokenLoader,
     children: [
-      { index: true, element: <Home />, loader: checkAuthLoader },
+      { index: true, element: <Home /> },
       { path: "auth", element: <Authentication />, action: authAction },
       {
         path: "email",
