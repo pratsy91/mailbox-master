@@ -9,12 +9,22 @@ const Header = () => {
     navigate("/auth?mode=login");
   };
 
+  const brandHandler = () => {
+    navigate("/");
+  };
+
   const loginHandler = () => {
     navigate("/auth?mode=login");
   };
   return (
     <Navbar className="justify-content-center" variant="dark" bg="dark">
-      <Navbar.Brand className="ms-5">My Mail</Navbar.Brand>
+      <Navbar.Brand
+        className="ms-5"
+        onClick={brandHandler}
+        style={{ cursor: "pointer" }}
+      >
+        My Mail
+      </Navbar.Brand>
       {token && (
         <Nav className="ms-auto  ">
           <NavLink

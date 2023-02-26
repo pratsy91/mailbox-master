@@ -34,6 +34,9 @@ const Inbox = () => {
         <FaBars className="mt-2 me-2 " /> <h4>Mail options</h4>
       </Button>
       <Container className="w-75 justify-content-center">
+        {mails.length === 0 && (
+          <h2 className="text-center mt-5 text-danger">Inbox is Empty</h2>
+        )}
         <ListGroup as="ul" className="p-3">
           {mails.map((mail) => (
             <ListGroup.Item

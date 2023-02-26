@@ -16,6 +16,9 @@ const FilteredMails = () => {
     <React.Fragment>
       <Container className="w-75 justify-content-center">
         <ListGroup as="ul" className="p-3">
+          {mails.length === 0 && (
+            <h2 className="text-center mt-5 text-danger">No unread Mails</h2>
+          )}
           {mails.map((mail) => (
             <ListGroup.Item
               as="li"

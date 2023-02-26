@@ -30,6 +30,11 @@ const SentMails = () => {
   return (
     <React.Fragment>
       <Container className="w-75 justify-content-center">
+        {mails.length === 0 && (
+          <h2 className="text-center mt-5 text-danger">
+            There are no sent Mails{" "}
+          </h2>
+        )}
         <ListGroup as="ul" className="p-3">
           {mails.map((mail) => (
             <ListGroup.Item
